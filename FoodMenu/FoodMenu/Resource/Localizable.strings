@@ -1,0 +1,16 @@
+/* 
+  Localizable.strings
+  FoodMenu
+
+  Created by Bach Nghiem on 06/10/2023.
+  
+*/
+
+"homeIcon" = "house";
+"favoriteIcon" = "list.bullet";
+
+"homeTitle" = "Food Menu";
+"favoriteTitle" = "Favourite";
+
+"homeTabTitle" = "Home";
+"favoriteTabTitle" = "Favorite";
