@@ -10,6 +10,8 @@ import Foundation
 // swiftlint:disable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:disable nesting type_body_length type_name vertical_whitespace_opening_braces
 internal enum L10n {
+  /// The data received from the server is invalid. Please try again
+  internal static let errorDecoding = L10n.tr("Localizable", "errorDecoding", fallback: "The data received from the server is invalid. Please try again")
   /// list.bullet
   internal static let favoriteIcon = L10n.tr("Localizable", "favoriteIcon", fallback: "list.bullet")
   /// Favorite
@@ -25,6 +27,14 @@ internal enum L10n {
   internal static let homeTabTitle = L10n.tr("Localizable", "homeTabTitle", fallback: "Home")
   /// Food Menu
   internal static let homeTitle = L10n.tr("Localizable", "homeTitle", fallback: "Food Menu")
+  /// The url is invalid, input a valid url
+  internal static let invalidUrl = L10n.tr("Localizable", "invalidUrl", fallback: "The url is invalid, input a valid url")
+  /// Invalid response from the server. Please try again.
+  internal static let serverError = L10n.tr("Localizable", "serverError", fallback: "Invalid response from the server. Please try again.")
+  /// Unable to complete your request. Please check your internet connection
+  internal static let unableToComplete = L10n.tr("Localizable", "unableToComplete", fallback: "Unable to complete your request. Please check your internet connection")
+  /// I have no idea what is wrong
+  internal static let unknownError = L10n.tr("Localizable", "unknownError", fallback: "I have no idea what is wrong")
 }
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:enable nesting type_body_length type_name vertical_whitespace_opening_braces
