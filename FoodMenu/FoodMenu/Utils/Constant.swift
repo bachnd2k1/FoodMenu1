@@ -18,5 +18,6 @@ class Constant {
         static let marginZero = 0.0
         static let categoryHeight = 150.0
         static let foodHeight = 250.0
+        static let largeRadius = 20.0
     }
 }

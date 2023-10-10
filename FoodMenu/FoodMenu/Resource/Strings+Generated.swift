@@ -20,6 +20,8 @@ internal enum L10n {
   internal static let favoriteTabTitle = L10n.tr("Localizable", "favoriteTabTitle", fallback: "Favorite")
   /// Favourite
   internal static let favoriteTitle = L10n.tr("Localizable", "favoriteTitle", fallback: "Favourite")
+  /// FoodCategory
+  internal static let foodCategory = L10n.tr("Localizable", "FoodCategory", fallback: "FoodCategory")
   /// tableviewcellid
   internal static let foodCell = L10n.tr("Localizable", "foodCell", fallback: "tableviewcellid")
   /// Localizable.strings

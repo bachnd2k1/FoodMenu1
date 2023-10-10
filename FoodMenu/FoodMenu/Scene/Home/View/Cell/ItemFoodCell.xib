@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FoodCell1" customModule="FoodMenu" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ItemFoodCell" id="gTV-IL-0wX" customClass="ItemFoodCell" customModule="FoodMenu" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="110" height="170"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="110" height="170"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QiW-qc-bED">
+                        <rect key="frame" x="0.0" y="150" width="110" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="DH3-C5-U7B"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
+                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pizza" translatesAutoresizingMaskIntoConstraints="NO" id="5dG-vy-Sfv">
+                        <rect key="frame" x="0.0" y="0.0" width="110" height="145"/>
+                    </imageView>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="5dG-vy-Sfv" secondAttribute="trailing" id="1ec-fQ-uP7"/>
+                <constraint firstItem="5dG-vy-Sfv" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="7Xb-Xx-Kxc"/>
+                <constraint firstAttribute="trailing" secondItem="QiW-qc-bED" secondAttribute="trailing" id="Cx5-rO-9Ke"/>
+                <constraint firstItem="QiW-qc-bED" firstAttribute="top" secondItem="5dG-vy-Sfv" secondAttribute="bottom" constant="5" id="Hkd-4w-BLM"/>
+                <constraint firstItem="QiW-qc-bED" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="UOq-Ly-hAX"/>
+                <constraint firstItem="5dG-vy-Sfv" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="ZWj-O3-KCI"/>
+                <constraint firstAttribute="bottom" secondItem="QiW-qc-bED" secondAttribute="bottom" id="vv4-b2-zHx"/>
+            </constraints>
+            <size key="customSize" width="98" height="115"/>
+            <connections>
+                <outlet property="foodImageView" destination="5dG-vy-Sfv" id="SV1-DJ-KuY"/>
+                <outlet property="nameLabel" destination="QiW-qc-bED" id="vTZ-zf-Hib"/>
+            </connections>
+            <point key="canvasLocation" x="169.56521739130437" y="174.77678571428569"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="pizza" width="1024" height="768"/>
+    </resources>
+</document>

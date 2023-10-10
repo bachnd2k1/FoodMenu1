@@ -23,6 +23,7 @@
 "itemCategoryCell" = "itemcategorycellid";
 "itemFoodCell" = "collectionviewcellid";
 "NameApp" = "FoodMenu";
+"FoodCategory" = "FoodCategory";
 
 
 "errorDecoding" =  "The data received from the server is invalid. Please try again";

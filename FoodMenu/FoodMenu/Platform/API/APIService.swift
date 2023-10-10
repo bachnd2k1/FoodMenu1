@@ -19,7 +19,6 @@ final class APICaller {
             AF.request(input.url, method: input.requestType, parameters: input.parameter, encoding: URLEncoding.default)
                 .response { (response) in
                     guard let data = response.data else { return }
-
                     let decoder = JSONDecoder()
                     do {
                         switch response.result {

@@ -33,6 +33,7 @@ class BaseRequest: NSObject {
         self.parameter = parameter
     }
 
+    
     var encoding: ParameterEncoding {
         switch requestType {
         case .get:
