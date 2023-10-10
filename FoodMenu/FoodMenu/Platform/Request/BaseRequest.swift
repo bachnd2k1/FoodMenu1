@@ -14,6 +14,7 @@ class BaseRequest: NSObject {
     var url = ""
     var requestType = Alamofire.HTTPMethod.get
     var parameter: [String: Any]?
+    var param: String?
 
     init(url: String) {
         super.init()
@@ -33,6 +34,13 @@ class BaseRequest: NSObject {
         self.parameter = parameter
     }
 
+    init(url: String, requestType: Alamofire.HTTPMethod, param: String) {
+        super.init()
+        self.url = url
+        self.requestType = requestType
+        self.param = param
+    }
+    
     var encoding: ParameterEncoding {
         switch requestType {
         case .get:

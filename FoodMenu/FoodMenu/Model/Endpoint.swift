@@ -10,4 +10,7 @@ import Foundation
 struct Endpoint {
     private static let baseUrl = "https://yummie.glitch.me"
     public static let APIFetchAllCategories = baseUrl + "/dish-categories"
+    public static func APIFoodByCategory(category: String) -> String {
+           return baseUrl + "/dishes/\(category)"
+       }
 }
