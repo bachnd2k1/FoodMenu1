@@ -15,6 +15,16 @@
 "homeTabTitle" = "Home";
 "favoriteTabTitle" = "Favorite";
 
+"popular" = "Popular";
+"special" = "Special";
+
+"categoryCell" = "categorycellid";
+"foodCell" = "tableviewcellid";
+"itemCategoryCell" = "itemcategorycellid";
+"itemFoodCell" = "collectionviewcellid";
+"NameApp" = "FoodMenu";
+
+
 "errorDecoding" =  "The data received from the server is invalid. Please try again";
 "unableToComplete" = "Unable to complete your request. Please check your internet connection";
 "unknownError" = "I have no idea what is wrong";

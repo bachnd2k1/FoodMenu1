@@ -10,6 +10,8 @@ import Foundation
 // swiftlint:disable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:disable nesting type_body_length type_name vertical_whitespace_opening_braces
 internal enum L10n {
+  /// categorycellid
+  internal static let categoryCell = L10n.tr("Localizable", "categoryCell", fallback: "categorycellid")
   /// The data received from the server is invalid. Please try again
   internal static let errorDecoding = L10n.tr("Localizable", "errorDecoding", fallback: "The data received from the server is invalid. Please try again")
   /// list.bullet
@@ -18,6 +20,8 @@ internal enum L10n {
   internal static let favoriteTabTitle = L10n.tr("Localizable", "favoriteTabTitle", fallback: "Favorite")
   /// Favourite
   internal static let favoriteTitle = L10n.tr("Localizable", "favoriteTitle", fallback: "Favourite")
+  /// tableviewcellid
+  internal static let foodCell = L10n.tr("Localizable", "foodCell", fallback: "tableviewcellid")
   /// Localizable.strings
   ///   FoodMenu
   /// 
@@ -29,8 +33,18 @@ internal enum L10n {
   internal static let homeTitle = L10n.tr("Localizable", "homeTitle", fallback: "Food Menu")
   /// The url is invalid, input a valid url
   internal static let invalidUrl = L10n.tr("Localizable", "invalidUrl", fallback: "The url is invalid, input a valid url")
+  /// itemcategorycellid
+  internal static let itemCategoryCell = L10n.tr("Localizable", "itemCategoryCell", fallback: "itemcategorycellid")
+  /// collectionviewcellid
+  internal static let itemFoodCell = L10n.tr("Localizable", "itemFoodCell", fallback: "collectionviewcellid")
+  /// FoodMenu
+  internal static let nameApp = L10n.tr("Localizable", "NameApp", fallback: "FoodMenu")
+  /// Popular
+  internal static let popular = L10n.tr("Localizable", "popular", fallback: "Popular")
   /// Invalid response from the server. Please try again.
   internal static let serverError = L10n.tr("Localizable", "serverError", fallback: "Invalid response from the server. Please try again.")
+  /// Special
+  internal static let special = L10n.tr("Localizable", "special", fallback: "Special")
   /// Unable to complete your request. Please check your internet connection
   internal static let unableToComplete = L10n.tr("Localizable", "unableToComplete", fallback: "Unable to complete your request. Please check your internet connection")
   /// I have no idea what is wrong
