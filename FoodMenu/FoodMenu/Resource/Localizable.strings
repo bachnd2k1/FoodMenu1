@@ -14,3 +14,9 @@
 
 "homeTabTitle" = "Home";
 "favoriteTabTitle" = "Favorite";
+
+"errorDecoding" =  "The data received from the server is invalid. Please try again";
+"unableToComplete" = "Unable to complete your request. Please check your internet connection";
+"unknownError" = "I have no idea what is wrong";
+"invalidUrl" = "The url is invalid, input a valid url";
+"serverError" = "Invalid response from the server. Please try again.";
