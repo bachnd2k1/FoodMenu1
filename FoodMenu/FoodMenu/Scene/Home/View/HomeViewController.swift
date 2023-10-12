@@ -31,7 +31,9 @@ final class HomeViewController: UIViewController, Bindable {
     
     func bindViewModel() {
         let loadTrigger = Driver.just(())
-        let input = HomeViewModel.Input(load: loadTrigger)
+        let input = HomeViewModel.Input(
+            load: loadTrigger
+        )
         let output = viewModel.transform(input, disposeBag: disposeBag)
         output.categoryResponse
             .drive(onNext: { [weak self] category in
@@ -73,6 +75,7 @@ extension HomeViewController: UITableViewDataSource {
     ) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(for: indexPath, cellType: CategoryCell.self)
         cell.updateCellWith(categories: foodCategory)
+        cell.delegate = self
         return cell
     }
     
@@ -95,6 +98,19 @@ extension HomeViewController: UITableViewDelegate {
         case 1,2: return Constant.Space.foodHeight
         default: return Constant.Space.foodHeight
         }
+    }
+}
+
+extension HomeViewController: CategoryCellDelegate {
+    func clickItem(category: Category) {
+        let viewController = FoodViewController()
+        let useCase = FoodUseCase()
+        let navigator = FoodNavigator()
+        let viewModel = FoodViewModel(useCase: useCase,
+                                      navigator: navigator,
+                                      category: category)
+        viewController.bindViewModel(to: viewModel)
+        navigationController?.pushViewController(viewController, animated: true)
     }
 }
 
