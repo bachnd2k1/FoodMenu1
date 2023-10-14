@@ -12,7 +12,7 @@ import Alamofire
 import Reusable
 import Then
 
-final class FoodViewController: UIViewController, Bindable {    
+final class FoodViewController: UIViewController, Bindable {
     @IBOutlet private weak var tableView: UITableView!
     
     var viewModel: FoodViewModel!
@@ -22,10 +22,11 @@ final class FoodViewController: UIViewController, Bindable {
         super.viewDidLoad()
         title = L10n.foodCategory
         view.backgroundColor = .white
-        let tableView = UITableView().then {
-            $0.dataSource = self
-            $0.separatorStyle = .none
+        tableView.do {
             $0.register(cellType: FoodCategoryCell.self)
+            $0.dataSource = self
+            $0.delegate = self
+            $0.separatorStyle = .none
         }
     }
     
@@ -60,5 +61,19 @@ extension FoodViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(for: indexPath, cellType: FoodCategoryCell.self)
         cell.configCell(food: foods[indexPath.row])
         return cell
+    }
+}
+
+extension FoodViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let food = foods[indexPath.row]
+        let viewController = DetailViewController()
+        let useCase = DetailUseCase()
+        let navigator = DetailNavigator()
+        let viewModel = DetailViewModel(useCase: useCase,
+                                        navigator: navigator,
+                                        food: food)
+        viewController.bindViewModel(to: viewModel)
+        navigationController?.pushViewController(viewController, animated: true)
     }
 }

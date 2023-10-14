@@ -10,8 +10,12 @@ import Foundation
 // swiftlint:disable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:disable nesting type_body_length type_name vertical_whitespace_opening_braces
 internal enum L10n {
+  /// calories
+  internal static let calories = L10n.tr("Localizable", "calories", fallback: "calories")
   /// categorycellid
   internal static let categoryCell = L10n.tr("Localizable", "categoryCell", fallback: "categorycellid")
+  /// DetailFood
+  internal static let detailFood = L10n.tr("Localizable", "DetailFood", fallback: "DetailFood")
   /// The data received from the server is invalid. Please try again
   internal static let errorDecoding = L10n.tr("Localizable", "errorDecoding", fallback: "The data received from the server is invalid. Please try again")
   /// list.bullet

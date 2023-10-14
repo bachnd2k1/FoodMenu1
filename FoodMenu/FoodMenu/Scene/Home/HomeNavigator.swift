@@ -18,7 +18,7 @@ struct HomeNavigator: HomeNavigatorType {
     func toListFood(category: Category) {
         let viewController = FoodViewController()
         let useCase = FoodUseCase()
-        let navigator = FoodNavigator()
+        let navigator = FoodNavigator(navigationController: navigationController)
         let viewModel = FoodViewModel(useCase: useCase,
                                       navigator: navigator,
                                       category: category)

@@ -9,6 +9,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 import Reusable
+import Alamofire
 
 final class HomeViewController: UIViewController, Bindable {
     @IBOutlet private weak var tableView: UITableView!
@@ -105,7 +106,7 @@ extension HomeViewController: CategoryCellDelegate {
     func clickItem(category: Category) {
         let viewController = FoodViewController()
         let useCase = FoodUseCase()
-        let navigator = FoodNavigator()
+        let navigator = FoodNavigator(navigationController: UINavigationController(rootViewController: viewController))
         let viewModel = FoodViewModel(useCase: useCase,
                                       navigator: navigator,
                                       category: category)
