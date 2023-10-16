@@ -10,12 +10,11 @@ import Alamofire
 import RxSwift
 
 protocol OrderRepository {
-    func orderFood(input: FoodRequest) -> Observable<FoodListResponse>
+    func orderFood(input: OrderRequest) -> Observable<OrderResponse>
 }
 
 final class OrderRepositoryImpl: OrderRepository {
-
-    func orderFood(input: FoodRequest) -> Observable<FoodListResponse> {
-        return APICaller.shared.fetch(input: input)
+    func orderFood(input: OrderRequest) -> Observable<OrderResponse> {
+        return APICaller.shared.placeOrder(input: input)
     }
 }

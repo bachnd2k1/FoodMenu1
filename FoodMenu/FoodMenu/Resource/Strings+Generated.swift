@@ -45,12 +45,18 @@ internal enum L10n {
   internal static let itemFoodCell = L10n.tr("Localizable", "itemFoodCell", fallback: "collectionviewcellid")
   /// FoodMenu
   internal static let nameApp = L10n.tr("Localizable", "NameApp", fallback: "FoodMenu")
+  /// OK
+  internal static let ok = L10n.tr("Localizable", "ok", fallback: "OK")
+  /// Your order has been received 😋😋😋
+  internal static let orderSuccess = L10n.tr("Localizable", "orderSuccess", fallback: "Your order has been received 😋😋😋")
   /// Popular
   internal static let popular = L10n.tr("Localizable", "popular", fallback: "Popular")
   /// Invalid response from the server. Please try again.
   internal static let serverError = L10n.tr("Localizable", "serverError", fallback: "Invalid response from the server. Please try again.")
   /// Special
   internal static let special = L10n.tr("Localizable", "special", fallback: "Special")
+  /// Thank you!
+  internal static let thanks = L10n.tr("Localizable", "thanks", fallback: "Thank you!")
   /// Unable to complete your request. Please check your internet connection
   internal static let unableToComplete = L10n.tr("Localizable", "unableToComplete", fallback: "Unable to complete your request. Please check your internet connection")
   /// I have no idea what is wrong

@@ -40,45 +40,35 @@ final class DetailViewController: UIViewController, Bindable {
     
     func bindViewModel() {
         let input = DetailViewModel.Input (
-            load: Driver.just(())
+            load: Driver.just(()),
+            name: nameTextField.rx.text.orEmpty.asDriver(),
+            orderTrigger: orderButton.rx.tap.asDriver()
         )
         let output = viewModel.transform(input, disposeBag: disposeBag)
+        output.order.drive(onNext: { [weak self] food in
+            self?.then { viewController in
+                viewController.showAlert(title: L10n.thanks, message: L10n.orderSuccess, buttonTitle: L10n.ok)
+                viewController.nameTextField.text = ""
+            }
+        })
+        .disposed(by: disposeBag)
         
-        output.foodImage
-            .drive(avatarBinding)
-            .disposed(by: disposeBag)
-        
-        output.foodName
-            .drive(nameLabel.rx.text)
-            .disposed(by: disposeBag)
-        
-        output.description
-            .drive(descriptionLabel.rx.text)
-            .disposed(by: disposeBag)
-        
-        output.calories
-            .drive(caloriesBinding)
+        output.food
+            .drive(foodBinding)
             .disposed(by: disposeBag)
     }
 }
 
 extension DetailViewController {
-    var avatarBinding: Binder<String> {
-        return Binder(self) { viewController, imageUrl in
-            let url = URL(string: imageUrl)
-            viewController.thumnailImageView.sd_setImage(with: url, completed: nil)
-        }
-    }
-    
-    var caloriesBinding: Binder<Int> {
-        return Binder(self) { viewController, calories in
-            viewController.caloryLabel.text = String(calories) + " " + L10n.calories
-        }
-    }
-    
-    var descriptionBinding: Binder<String> {
-        return Binder(self) { viewController, description in
-            viewController.descriptionLabel.text = description
+    var foodBinding: Binder<Food> {
+        return Binder(self) { viewController, food in
+            let url = URL(string: food.image)
+            viewController.then {
+                $0.thumnailImageView.sd_setImage(with: url, completed: nil)
+                $0.caloryLabel.text = String(food.calories) + " " + L10n.calories
+                $0.descriptionLabel.text = food.description
+                $0.nameLabel.text = food.name
+            }
         }
     }
 }

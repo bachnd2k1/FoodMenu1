@@ -36,5 +36,23 @@ final class APICaller {
             return Disposables.create()
         }
     }
+        
+    func placeOrder <T: Codable> (input: BaseRequest) -> Observable<T> {
+        return Observable.create { observer in
+            let request = AF.request(input.url, method: input.requestType, parameters: input.request, encoder: JSONParameterEncoder.default)
+            request.responseDecodable(of: T.self) { response in
+                switch response.result {
+                case .success(let responseObject):
+                    observer.onNext(responseObject)
+                    observer.onCompleted()
+                case .failure(let error):
+                    observer.onError(error)
+                }
+            }
+            return Disposables.create {
+                request.cancel()
+            }
+        }
+    }
 }
 

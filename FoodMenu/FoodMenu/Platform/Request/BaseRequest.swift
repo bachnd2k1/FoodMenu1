@@ -14,6 +14,7 @@ class BaseRequest: NSObject {
     var url = ""
     var requestType = Alamofire.HTTPMethod.get
     var parameter: [String: Any]?
+    var request = Request()
 
     init(url: String) {
         super.init()
@@ -26,6 +27,13 @@ class BaseRequest: NSObject {
         self.requestType = requestType
     }
 
+    init(url: String, requestType: Alamofire.HTTPMethod, request: Request) {
+        super.init()
+        self.url = url
+        self.requestType = requestType
+        self.request = request
+    }
+    
     init(url: String, requestType: Alamofire.HTTPMethod, parameter: [String: Any]?) {
         super.init()
         self.url = url
