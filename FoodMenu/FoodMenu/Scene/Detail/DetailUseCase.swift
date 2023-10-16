@@ -6,11 +6,16 @@
 //
 
 import Foundation
+import RxSwift
 
 protocol DetailUseCaseType {
- 
+    func placeOrder(input: OrderRequest) -> Observable<OrderResponse>
 }
 
 struct DetailUseCase: DetailUseCaseType {
-
+    func placeOrder(input: OrderRequest) -> Observable<OrderResponse> {
+        return OrderRepositoryImpl().orderFood(input: input)
+    }
 }
+
+

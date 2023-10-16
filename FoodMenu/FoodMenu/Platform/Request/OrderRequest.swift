@@ -8,7 +8,7 @@
 import Foundation
 
 final class OrderRequest: BaseRequest {
-    required init(keyword: String) {
-        super.init(url: Endpoint.APIFoodByCategory + keyword, requestType: .get, parameter: [:])
+    required init(keyword: String,request: Request) {
+        super.init(url: Endpoint.APIOrderFood + keyword, requestType: .post, request: request)
     }
 }

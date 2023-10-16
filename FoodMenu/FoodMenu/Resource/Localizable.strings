@@ -18,6 +18,10 @@
 "popular" = "Popular";
 "special" = "Special";
 "calories" = "calories";
+"ok" = "OK";
+"thanks" = "Thank you!";
+"orderSuccess" = "Your order has been received 😋😋😋";
+
 
 "categoryCell" = "categorycellid";
 "foodCell" = "tableviewcellid";

@@ -8,5 +8,12 @@
 import Foundation
 
 struct Request: Codable{
-    let name: String
+    let name: String?
+    init(name: String = "") {
+        self.name = name
+    }
+    
+    private enum CodingKeys: String, CodingKey {
+        case name
+    }
 }
