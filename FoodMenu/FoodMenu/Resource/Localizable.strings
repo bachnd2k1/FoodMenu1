@@ -17,6 +17,7 @@
 
 "popular" = "Popular";
 "special" = "Special";
+"calories" = "calories";
 
 "categoryCell" = "categorycellid";
 "foodCell" = "tableviewcellid";
@@ -24,6 +25,7 @@
 "itemFoodCell" = "collectionviewcellid";
 "NameApp" = "FoodMenu";
 "FoodCategory" = "FoodCategory";
+"DetailFood" = "DetailFood";
 
 
 "errorDecoding" =  "The data received from the server is invalid. Please try again";

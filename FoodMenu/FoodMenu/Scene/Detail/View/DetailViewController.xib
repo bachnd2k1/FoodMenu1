@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailViewController" customModule="FoodMenu" customModuleProvider="target">
+            <connections>
+                <outlet property="caloryLabel" destination="AHu-l2-YF8" id="6Iy-cX-iaN"/>
+                <outlet property="descriptionLabel" destination="NUN-m9-cN4" id="eoB-si-EWc"/>
+                <outlet property="favouriteButton" destination="juE-wn-qLH" id="dm8-cK-Ijw"/>
+                <outlet property="nameLabel" destination="gyZ-L6-DOB" id="PZc-4O-xBF"/>
+                <outlet property="nameTextField" destination="EQW-Jp-gVO" id="z3u-uy-59M"/>
+                <outlet property="orderButton" destination="RCU-o9-m2i" id="PYI-b1-nys"/>
+                <outlet property="thumnailImageView" destination="O1j-fc-E3F" id="VQb-jz-9II"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pizza" translatesAutoresizingMaskIntoConstraints="NO" id="O1j-fc-E3F">
+                    <rect key="frame" x="0.0" y="44" width="414" height="300"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="300" id="isP-JY-xMk"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Food" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gyZ-L6-DOB">
+                    <rect key="frame" x="8" y="354" width="150" height="25"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="150" id="8p1-20-RcI"/>
+                        <constraint firstAttribute="height" constant="25" id="sZZ-if-NZE"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1200 Calories" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AHu-l2-YF8">
+                    <rect key="frame" x="244" y="354" width="150" height="25"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="25" id="0n1-L2-3BC"/>
+                        <constraint firstAttribute="width" constant="150" id="VbZ-Gf-PUP"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" systemColor="systemOrangeColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="13" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NUN-m9-cN4">
+                    <rect key="frame" x="8" y="391" width="402" height="184"/>
+                    <string key="text">https://res.cloudinary.com/dn4pokov0/image/upload/v1611311563/d3f69e36ea17c0e0bb129ba1403e24dc.png https://res.cloudinary.com/dn4pokov0/image/upload/v1611311563/d3f69e36ea17c0e0bb129ba1403e24dc.pngd3f69e36ea17c0e0bb129ba1403e24dc.png https://res.cloudinary.com/dn4pokov0/image/upload/v1611311563/d3f69e36ea17c0e0bb129ba1403e24dc.pngd3f69e36ea17c0e0bb129ba1403e24dc.png https://res.cloudinary.com/dn4pokov0/image/upload/v1611311563/d3f69e36ea17c0e0bb129ba1403e24dc.png</string>
+                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Enter your name ..." borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EQW-Jp-gVO">
+                    <rect key="frame" x="12" y="697" width="390" height="40"/>
+                    <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="r2H-NM-2k1"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RCU-o9-m2i">
+                    <rect key="frame" x="147" y="787" width="120" height="40"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="120" id="7pq-ct-x5d"/>
+                        <constraint firstAttribute="height" constant="40" id="eke-4p-PmE"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Place Order">
+                        <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
+                    </buttonConfiguration>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="juE-wn-qLH">
+                    <rect key="frame" x="344" y="807" width="40" height="40"/>
+                    <color key="backgroundColor" systemColor="systemRedColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="6NM-bJ-cic"/>
+                        <constraint firstAttribute="width" constant="40" id="Mmk-Oc-7iS"/>
+                    </constraints>
+                    <color key="tintColor" systemColor="systemBackgroundColor"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="heart" catalog="system"/>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="gyZ-L6-DOB" firstAttribute="top" secondItem="O1j-fc-E3F" secondAttribute="bottom" constant="10" id="0kD-xE-Pm9"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="EQW-Jp-gVO" secondAttribute="trailing" constant="12" id="46f-97-DU0"/>
+                <constraint firstItem="NUN-m9-cN4" firstAttribute="top" secondItem="gyZ-L6-DOB" secondAttribute="bottom" constant="12" id="6Ex-MI-Kiu"/>
+                <constraint firstItem="O1j-fc-E3F" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="GGD-KL-70s"/>
+                <constraint firstItem="RCU-o9-m2i" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="MAs-Xe-mmg"/>
+                <constraint firstItem="NUN-m9-cN4" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="8" id="UEI-fK-m42"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="RCU-o9-m2i" secondAttribute="bottom" constant="35" id="XET-X8-Ld9"/>
+                <constraint firstItem="O1j-fc-E3F" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="ajY-3b-9kL"/>
+                <constraint firstItem="AHu-l2-YF8" firstAttribute="top" secondItem="O1j-fc-E3F" secondAttribute="bottom" constant="10" id="cgf-Tq-yeF"/>
+                <constraint firstItem="O1j-fc-E3F" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="f1n-2O-NSR"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="juE-wn-qLH" secondAttribute="trailing" constant="30" id="hgP-Sn-519"/>
+                <constraint firstItem="EQW-Jp-gVO" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="12" id="i4q-gc-HBt"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="AHu-l2-YF8" secondAttribute="trailing" constant="20" id="it6-Hh-nj2"/>
+                <constraint firstItem="gyZ-L6-DOB" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="8" id="ukP-T7-LC6"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="juE-wn-qLH" secondAttribute="bottom" constant="15" id="v2V-f1-LHh"/>
+                <constraint firstItem="RCU-o9-m2i" firstAttribute="top" secondItem="EQW-Jp-gVO" secondAttribute="bottom" constant="50" id="xOh-3m-jwe"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="NUN-m9-cN4" secondAttribute="trailing" constant="4" id="z5X-OO-RTA"/>
+            </constraints>
+            <point key="canvasLocation" x="137.68115942028987" y="97.767857142857139"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="heart" catalog="system" width="128" height="109"/>
+        <image name="pizza" width="1024" height="768"/>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
