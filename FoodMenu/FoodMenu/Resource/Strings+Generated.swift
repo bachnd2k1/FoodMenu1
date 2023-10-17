@@ -37,6 +37,8 @@ internal enum L10n {
   internal static let homeTabTitle = L10n.tr("Localizable", "homeTabTitle", fallback: "Home")
   /// Food Menu
   internal static let homeTitle = L10n.tr("Localizable", "homeTitle", fallback: "Food Menu")
+  /// takeoutbag.and.cup.and.straw
+  internal static let imageOrder = L10n.tr("Localizable", "imageOrder", fallback: "takeoutbag.and.cup.and.straw")
   /// The url is invalid, input a valid url
   internal static let invalidUrl = L10n.tr("Localizable", "invalidUrl", fallback: "The url is invalid, input a valid url")
   /// itemcategorycellid
@@ -47,6 +49,8 @@ internal enum L10n {
   internal static let nameApp = L10n.tr("Localizable", "NameApp", fallback: "FoodMenu")
   /// OK
   internal static let ok = L10n.tr("Localizable", "ok", fallback: "OK")
+  /// Order Food
+  internal static let orderFood = L10n.tr("Localizable", "orderFood", fallback: "Order Food")
   /// Your order has been received 😋😋😋
   internal static let orderSuccess = L10n.tr("Localizable", "orderSuccess", fallback: "Your order has been received 😋😋😋")
   /// Popular

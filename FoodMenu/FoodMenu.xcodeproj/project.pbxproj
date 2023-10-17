@@ -12,6 +12,14 @@
 		522393402AD9550900B3776D /* OrderResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5223933F2AD9550800B3776D /* OrderResponse.swift */; };
 		522393422ADA361700B3776D /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522393412ADA361700B3776D /* UIButton.swift */; };
 		5223934A2ADCEC8400B3776D /* UIViewController .swift in Sources */ = {isa = PBXBuildFile; fileRef = 522393492ADCEC8400B3776D /* UIViewController .swift */; };
+		522393502ADE042D00B3776D /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5223934E2ADE042D00B3776D /* OrderViewController.swift */; };
+		522393512ADE042D00B3776D /* OrderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5223934F2ADE042D00B3776D /* OrderViewController.xib */; };
+		522393532ADE067C00B3776D /* OrderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522393522ADE067C00B3776D /* OrderViewModel.swift */; };
+		522393552ADE068E00B3776D /* OrderUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522393542ADE068E00B3776D /* OrderUseCase.swift */; };
+		522393572ADE069800B3776D /* OrderNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522393562ADE069800B3776D /* OrderNavigator.swift */; };
+		522393592ADE08A900B3776D /* OrdersRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522393582ADE08A900B3776D /* OrdersRepository.swift */; };
+		5223935B2ADE095200B3776D /* OrdersRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5223935A2ADE095200B3776D /* OrdersRequest.swift */; };
+		5223935D2ADE09E200B3776D /* OrdersResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5223935C2ADE09E200B3776D /* OrdersResponse.swift */; };
 		526E17092AD4E197007270F1 /* HomeUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526E17082AD4E197007270F1 /* HomeUseCase.swift */; };
 		526E170B2AD4E1AB007270F1 /* HomeNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526E170A2AD4E1AB007270F1 /* HomeNavigator.swift */; };
 		526E17122AD4E257007270F1 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526E17112AD4E257007270F1 /* APIService.swift */; };
@@ -98,6 +106,14 @@
 		5223933F2AD9550800B3776D /* OrderResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderResponse.swift; sourceTree = "<group>"; };
 		522393412ADA361700B3776D /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
 		522393492ADCEC8400B3776D /* UIViewController .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController .swift"; sourceTree = "<group>"; };
+		5223934E2ADE042D00B3776D /* OrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
+		5223934F2ADE042D00B3776D /* OrderViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderViewController.xib; sourceTree = "<group>"; };
+		522393522ADE067C00B3776D /* OrderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewModel.swift; sourceTree = "<group>"; };
+		522393542ADE068E00B3776D /* OrderUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderUseCase.swift; sourceTree = "<group>"; };
+		522393562ADE069800B3776D /* OrderNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderNavigator.swift; sourceTree = "<group>"; };
+		522393582ADE08A900B3776D /* OrdersRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersRepository.swift; sourceTree = "<group>"; };
+		5223935A2ADE095200B3776D /* OrdersRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersRequest.swift; sourceTree = "<group>"; };
+		5223935C2ADE09E200B3776D /* OrdersResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersResponse.swift; sourceTree = "<group>"; };
 		526E17082AD4E197007270F1 /* HomeUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeUseCase.swift; sourceTree = "<group>"; };
 		526E170A2AD4E1AB007270F1 /* HomeNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNavigator.swift; sourceTree = "<group>"; };
 		526E17112AD4E257007270F1 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
@@ -187,6 +203,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5223934B2ADE040600B3776D /* Order */ = {
+			isa = PBXGroup;
+			children = (
+				5223934D2ADE041900B3776D /* View */,
+				5223934C2ADE041200B3776D /* ViewModel */,
+				522393542ADE068E00B3776D /* OrderUseCase.swift */,
+				522393562ADE069800B3776D /* OrderNavigator.swift */,
+			);
+			path = Order;
+			sourceTree = "<group>";
+		};
+		5223934C2ADE041200B3776D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				522393522ADE067C00B3776D /* OrderViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		5223934D2ADE041900B3776D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5223934E2ADE042D00B3776D /* OrderViewController.swift */,
+				5223934F2ADE042D00B3776D /* OrderViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		526E17062AD4E16A007270F1 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -239,6 +283,7 @@
 				526E17152AD4E275007270F1 /* CategoryRequest.swift */,
 				526E17652AD6534A007270F1 /* FoodRequest.swift */,
 				526E17832AD79BD2007270F1 /* OrderRequest.swift */,
+				5223935A2ADE095200B3776D /* OrdersRequest.swift */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -257,6 +302,7 @@
 				526E17182AD4E2A5007270F1 /* CategoryRepository.swift */,
 				526E17672AD6542C007270F1 /* FoodRepository.swift */,
 				526E17812AD79B9D007270F1 /* OrderRepository.swift */,
+				522393582ADE08A900B3776D /* OrdersRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -423,6 +469,7 @@
 		52C86D1B2ACFB5AB008412E8 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				5223934B2ADE040600B3776D /* Order */,
 				526E17742AD79218007270F1 /* Detail */,
 				526E175A2AD65110007270F1 /* Food */,
 				526E17302AD4F33F007270F1 /* TabBar */,
@@ -473,6 +520,7 @@
 				5223933B2AD9548200B3776D /* Request.swift */,
 				5223933D2AD954EB00B3776D /* Order.swift */,
 				5223933F2AD9550800B3776D /* OrderResponse.swift */,
+				5223935C2ADE09E200B3776D /* OrdersResponse.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -608,6 +656,7 @@
 				52C86D142ACFAAD2008412E8 /* swiftgen.yml in Resources */,
 				526E17732AD6D2A7007270F1 /* FoodCategoryCell.xib in Resources */,
 				52C86CE52ACF97B2008412E8 /* LaunchScreen.storyboard in Resources */,
+				522393512ADE042D00B3776D /* OrderViewController.xib in Resources */,
 				526E17602AD65152007270F1 /* FoodViewController.xib in Resources */,
 				52C86CE22ACF97B2008412E8 /* Assets.xcassets in Resources */,
 				526E17782AD79231007270F1 /* DetailViewController.xib in Resources */,
@@ -716,20 +765,25 @@
 				526E172B2AD4E980007270F1 /* AppNavigator.swift in Sources */,
 				526E171D2AD4E670007270F1 /* ViewModelType.swift in Sources */,
 				526E17622AD651D2007270F1 /* FoodUseCase.swift in Sources */,
+				522393552ADE068E00B3776D /* OrderUseCase.swift in Sources */,
 				52C86D4F2AD0092F008412E8 /* NetworkManager.swift in Sources */,
 				52C86CD92ACF97AE008412E8 /* AppDelegate.swift in Sources */,
 				52C86D4B2AD00917008412E8 /* Category.swift in Sources */,
+				522393502ADE042D00B3776D /* OrderViewController.swift in Sources */,
 				5223933E2AD954EB00B3776D /* Order.swift in Sources */,
 				526E17802AD79A37007270F1 /* DetailNavigator.swift in Sources */,
 				52C86D4A2AD00917008412E8 /* Food.swift in Sources */,
+				522393592ADE08A900B3776D /* OrdersRepository.swift in Sources */,
 				526E171B2AD4E51A007270F1 /* Endpoint.swift in Sources */,
 				526E176C2AD65C6D007270F1 /* FoodListResponse.swift in Sources */,
+				5223935D2ADE09E200B3776D /* OrdersResponse.swift in Sources */,
 				526E17722AD6D2A7007270F1 /* FoodCategoryCell.swift in Sources */,
 				52C86D4D2AD00917008412E8 /* FoodResponse.swift in Sources */,
 				526E17452AD54336007270F1 /* Constant.swift in Sources */,
 				526E17242AD4E812007270F1 /* UINavigationController.swift in Sources */,
 				526E176A2AD6552F007270F1 /* FoodViewModel.swift in Sources */,
 				526E177B2AD798BF007270F1 /* DetailViewModel.swift in Sources */,
+				522393532ADE067C00B3776D /* OrderViewModel.swift in Sources */,
 				52C86D202ACFB5D5008412E8 /* FavouriteViewController.swift in Sources */,
 				526E171F2AD4E6AA007270F1 /* HomeViewModel.swift in Sources */,
 				526E17292AD4E8E4007270F1 /* Bindable.swift in Sources */,
@@ -738,11 +792,13 @@
 				526E177E2AD79A29007270F1 /* DetailUseCase.swift in Sources */,
 				526E17682AD6542C007270F1 /* FoodRepository.swift in Sources */,
 				526E17162AD4E275007270F1 /* CategoryRequest.swift in Sources */,
+				522393572ADE069800B3776D /* OrderNavigator.swift in Sources */,
 				5223933C2AD9548200B3776D /* Request.swift in Sources */,
 				526E17842AD79BD2007270F1 /* OrderRequest.swift in Sources */,
 				526E173C2AD53AD6007270F1 /* ItemFoodCell.swift in Sources */,
 				522393402AD9550900B3776D /* OrderResponse.swift in Sources */,
 				526E175F2AD65152007270F1 /* FoodViewController.swift in Sources */,
+				5223935B2ADE095200B3776D /* OrdersRequest.swift in Sources */,
 				526E17402AD53AD6007270F1 /* ItemCategoryCell.swift in Sources */,
 				526E17192AD4E2A5007270F1 /* CategoryRepository.swift in Sources */,
 				526E172D2AD4E993007270F1 /* AppUseCase.swift in Sources */,

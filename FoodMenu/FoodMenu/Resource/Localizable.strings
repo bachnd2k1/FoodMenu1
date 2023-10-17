@@ -21,6 +21,8 @@
 "ok" = "OK";
 "thanks" = "Thank you!";
 "orderSuccess" = "Your order has been received 😋😋😋";
+"imageOrder" = "takeoutbag.and.cup.and.straw";
+"orderFood" = "Order Food";
 
 
 "categoryCell" = "categorycellid";

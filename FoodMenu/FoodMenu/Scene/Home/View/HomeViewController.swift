@@ -13,6 +13,7 @@ import Alamofire
 
 final class HomeViewController: UIViewController, Bindable {
     @IBOutlet private weak var tableView: UITableView!
+    var ordersButton: UIBarButtonItem!
     var foodCategory = [Category]()
     var popularDishes = [Food]()
     var chefsSpecials = [Food]()
@@ -23,17 +24,23 @@ final class HomeViewController: UIViewController, Bindable {
         super.viewDidLoad()
         title = L10n.nameApp
         view.backgroundColor = .white
-        tableView.dataSource = self
-        tableView.delegate = self
-        tableView.separatorStyle = .none
-        tableView.register(cellType: CategoryCell.self)
-        tableView.register(cellType: FoodsCell.self)
+        tableView.do {
+            $0.register(cellType: CategoryCell.self)
+            $0.register(cellType: FoodsCell.self)
+            $0.dataSource = self
+            $0.delegate = self
+            $0.separatorStyle = .none
+        }
+        ordersButton = UIBarButtonItem(image: UIImage(systemName: L10n.imageOrder), style: .plain, target: self, action: nil)
+        ordersButton.tintColor = .systemRed
+        navigationItem.rightBarButtonItem = ordersButton
     }
     
     func bindViewModel() {
         let loadTrigger = Driver.just(())
         let input = HomeViewModel.Input(
-            load: loadTrigger
+            load: loadTrigger,
+            openTrigger: ordersButton.rx.tap.asDriver()
         )
         let output = viewModel.transform(input, disposeBag: disposeBag)
         output.categoryResponse
@@ -49,6 +56,16 @@ final class HomeViewController: UIViewController, Bindable {
         popularDishes = data.populars
         chefsSpecials = data.specials
         tableView.reloadData()
+    }
+    
+    @objc func buttonTapped(){
+        let viewController = OrderViewController()
+        let useCase = OrderUseCase()
+        let navigator = OrderNavigator()
+        let viewModel = OrderViewModel(useCase: useCase,
+                                       navigator: navigator)
+        viewController.bindViewModel(to: viewModel)
+        navigationController?.pushViewController(viewController, animated: true)
     }
 }
 
