@@ -19,6 +19,7 @@ struct HomeViewModel {
 extension HomeViewModel: ViewModelType {
     struct Input {
         let load: Driver<Void>
+        let openTrigger: Driver<Void>
     }
     
     struct Output {
@@ -28,6 +29,12 @@ extension HomeViewModel: ViewModelType {
     
     func transform(_ input: Input, disposeBag: DisposeBag) -> Output {
         let indicator = ActivityIndicator()
+        
+        input.openTrigger
+            .drive(onNext: { _ in
+                self.navigator.toOrderFood()
+            })
+            .disposed(by: disposeBag)
         
         let category = input.load
             .flatMapLatest { _ -> Driver<CategoryResponse> in

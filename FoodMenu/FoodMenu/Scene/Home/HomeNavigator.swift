@@ -10,6 +10,7 @@ import Foundation
 
 protocol HomeNavigatorType {
     func toListFood(category: Category)
+    func toOrderFood()
 }
 
 struct HomeNavigator: HomeNavigatorType {
@@ -22,6 +23,16 @@ struct HomeNavigator: HomeNavigatorType {
         let viewModel = FoodViewModel(useCase: useCase,
                                       navigator: navigator,
                                       category: category)
+        viewController.bindViewModel(to: viewModel)
+        navigationController.pushViewController(viewController, animated: true)
+    }
+    
+    func toOrderFood() {
+        let viewController = OrderViewController()
+        let useCase = OrderUseCase()
+        let navigator = OrderNavigator()
+        let viewModel = OrderViewModel(useCase: useCase,
+                                      navigator: navigator)
         viewController.bindViewModel(to: viewModel)
         navigationController.pushViewController(viewController, animated: true)
     }
